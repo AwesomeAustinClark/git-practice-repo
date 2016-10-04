@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -q express
+#   specify the queue batch, express or bigmem
+#PBS -l nodes=1:ppn=1
+#   request 2 processors on 1 node
+#PBS -l walltime=10:00
+#PBS -j oe
+#PBS -m abe -M caustil@okstate.edu
+cd $PBS_O_WORKDIR
+ 
+
+
+bash do-stats.sh *[AB].txt
+
